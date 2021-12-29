@@ -165,7 +165,7 @@ const questions = () => {
 };
 
 const writeToFile = data => {
-    fs.writeFile("README.md", data, err =>{
+    fs.writeFile("./example/README.md", data, err =>{
         if(err) {
             console.log(err);
             return;

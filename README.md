@@ -1,63 +1,22 @@
 
-  # h
+# README-Maker
 
-  ## Description 
-  
-  h
+## Description
 
-  ## Table of Contents
-  
-  * [Installation](#installation)
-  * [Usage](#usage)
-  * [Credits](#credits)
-  * [License](#license)
-  * [Features](#features)
-  * [Contributing](#contributing)
-  * [Tests](#tests)
-  * [Questions](#questions)
-  
-  
-  ## Installation
-  
-  h
-  
-  ## Usage
-  
-  h
-  
-  ## Credits
-  
-  h  
-  
-  ## License
-  
-  
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+This project was made using node.js and inquirer.  When the application is run the user will be prompted with questions asking for the information included in a README.  Once all the prompts are answered that information will be used to generate a Markdown temple that will then be exported into its own README.md file.  An example of a generated README file is inclued in the example folder.
+
+## Installation
     
-[The MIT License](https://mit-license.org/)
+To Install the application you will need node.js and inquirer.  Once you have node.js installed on your machine you will then need to intall inquirer using the "npm install inquirer" command in the terminal.
 
-Copyright © 2021
+## Usage
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-    
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-    
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Once you have everything installed simply run the command "node index.js" in the terminal to run the application.
 
-  
-  ## Features
-  
-  h
-  
-  ## Contributing
-  
-  h
-  
-  ## Tests
-  
-  h
-  
-  ## Questions
+## Links
 
-  Contact me with any questions about this project. GitHub: h  Email: h
+Video Demo: https://watch.screencastify.com/v/mmHtn76zojce38FG9kXa
+
+GitHub Repo:  https://github.com/JMaurizio/README-Maker
+  
   
