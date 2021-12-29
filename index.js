@@ -1,5 +1,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 const questions = () => {
     return inquirer.prompt([
@@ -105,7 +106,7 @@ const questions = () => {
             type: "list",
             name: "license",
             message: "Choose a license for the project.",
-            choices: ["MIT", "GPL", "Apache", "BSD", "LGPL", "Ms-Pl"],
+            choices: ["MIT", "GNU General Public License 3", "GNU General Public License 2", "Apache License 2.0"],
             default: ["MIT"]
         },
         {
@@ -117,7 +118,8 @@ const questions = () => {
                     return true;
                 }
                 else {
-                    
+                    console.log("Please provide a list of the applications features.");
+                    return false;
                 }
             }
         },
@@ -130,7 +132,8 @@ const questions = () => {
                     return true;
                 }
                 else {
-                    
+                    console.log("Please provide a list of project contributers.");
+                    return false; 
                 }
             }
         },
@@ -139,15 +142,38 @@ const questions = () => {
             name: "test",
             message: "How do you run tests on the application?",
             default: "npm test",
+            validate: nameInput => {
+                if(nameInput) {
+                    return true;
+                }
+                else {
+                    console.log("Please let people know how to test the application.");
+                    return false; 
+                }
+            }
         }
     ])
+    .then(answers => {
+        return generateMarkdown(answers);
+    })
+    .then(data => {
+        return writeToFile(data);
+    })
+    .catch(err => {
+        console.log(err)
+    })
 };
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+const writeToFile = data => {
+    fs.writeFile("README.md", data, err =>{
+        if(err) {
+            console.log(err);
+            return;
+        }
+        else {
+            console.log("README created!")
+        }
+    })
+};
 
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+questions()
